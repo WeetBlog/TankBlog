@@ -1,0 +1,22 @@
+.clearFix:before,.clearFix:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+html,body{
+	height: 100%;
+	font-family: tank;
+	overflow: hidden;
+}
+
+
+
+@font-face {
+    font-family: tank;
+    src: url(/font/ZCOOLXiaoWei-Regular.ttf);
+}
+
+.tank{
+	font-family: tank;
+}
