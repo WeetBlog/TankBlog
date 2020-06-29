@@ -7,7 +7,7 @@
           <!-- <p class="user">
             <router-link class="user-link" to="/"><i class="iconfont icon-login01"></i> <span  class="login">登入</span></router-link>
             <router-link class="user-link" to="/"><i class="iconfont icon-zhucetianjiahaoyou"></i> <span  class="login">注册</span></router-link>
-          </p> -->
+          </p>-->
           <p class="user">
             <router-link class="user-link" to="/">
               <i class="el-icon-user-solid" style="padding-right:10px;"></i>
@@ -20,30 +20,42 @@
             </router-link>
           </p>
           <el-menu default-active="2" class="el-menu-vertical-demo" text-color="#000">
-            <el-menu-item index="1" class="drawer">
-              <i class="iconfont icon-wenzhang"></i>
-              <span slot="title">博客</span>
-            </el-menu-item>
-            <el-menu-item index="1" class="drawer">
-              <i class="iconfont icon-liuyan"></i>
-              <span slot="title">留言</span>
-            </el-menu-item>
-            <el-menu-item index="1" class="drawer">
-              <i class="iconfont icon-bianjibijishishouxie"></i>
-              <span slot="title">简言</span>
-            </el-menu-item>
-            <el-menu-item index="1" class="drawer">
-              <i class="iconfont icon-youqinglianjie"></i>
-              <span slot="title">友链</span>
-            </el-menu-item>
-            <el-menu-item index="1" class="drawer">
-              <i class="iconfont icon-guanyuwo"></i>
-              <span slot="title">关于我</span>
-            </el-menu-item>
-            <el-menu-item index="3"  disabled>
-              <i class="el-icon-setting"></i>
-              <span slot="title">后台管理</span>
-            </el-menu-item>
+            <router-link class="user-link" to="/blog">
+              <el-menu-item index="1" class="drawer">
+                <i class="iconfont icon-wenzhang"></i>
+                <span slot="title">博客</span>
+              </el-menu-item>
+            </router-link>
+            <router-link class="user-link" to="/blog">
+              <el-menu-item index="1" class="drawer">
+                <i class="iconfont icon-liuyan"></i>
+                <span slot="title">留言</span>
+              </el-menu-item>
+            </router-link>
+            <router-link class="user-link" to="/blog">
+              <el-menu-item index="1" class="drawer">
+                <i class="iconfont icon-bianjibijishishouxie"></i>
+                <span slot="title">简言</span>
+              </el-menu-item>
+            </router-link>
+            <router-link class="user-link" to="/blog">
+              <el-menu-item index="1" class="drawer">
+                <i class="iconfont icon-youqinglianjie"></i>
+                <span slot="title">友链</span>
+              </el-menu-item>
+            </router-link>
+            <router-link class="user-link" to="/blog">
+              <el-menu-item index="1" class="drawer">
+                <i class="iconfont icon-guanyuwo"></i>
+                <span slot="title">关于我</span>
+              </el-menu-item>
+            </router-link>
+            <router-link class="user-link"  to="/">
+              <el-menu-item index="3" disabled>
+                <i class="el-icon-setting"></i>
+                <span slot="title">后台管理</span>
+              </el-menu-item>
+            </router-link>
           </el-menu>
         </el-col>
       </el-row>
@@ -76,7 +88,9 @@
                   <h4>世间的相遇，都是命运的安排</h4>
                   <span>2020年05月21日</span>
                   <p>如果有一天，我们有幸相遇，我会告诉你，这一切，都是命运的安排，我和你，注定要一起走完这一生。</p>
-                  <router-link to="/"><i class="iconfont icon-yuedu"></i> 点击阅读</router-link>
+                  <router-link to="/">
+                    <i class="iconfont icon-yuedu"></i> 点击阅读
+                  </router-link>
                 </div>
               </el-col>
               <el-col :md="{span:8,offset:0}" :sm="{span:7,offset:1}" :xs="{span:16,offset:4}">
@@ -94,7 +108,9 @@
                   <h4>世间的相遇，都是命运的安排</h4>
                   <span>2020年05月21日</span>
                   <p>如果有一天，我们有幸相遇，我会告诉你，这一切，都是命运的安排，我和你，注定要一起走完这一生。</p>
-                  <router-link to="/"><i class="iconfont icon-yuedu"></i> 点击阅读</router-link>
+                  <router-link to="/">
+                    <i class="iconfont icon-yuedu"></i> 点击阅读
+                  </router-link>
                 </div>
               </el-col>
               <el-col :md="{span:8,offset:0}" :sm="{span:7,offset:1}" :xs="{span:16,offset:4}">
@@ -112,7 +128,9 @@
                   <h4>世间的相遇，都是命运的安排</h4>
                   <span>2020年05月21日</span>
                   <p>如果有一天，我们有幸相遇，我会告诉你，这一切，都是命运的安排，我和你，注定要一起走完这一生。</p>
-                  <router-link to="/"><i class="iconfont icon-yuedu"></i> 点击阅读</router-link>
+                  <router-link to="/">
+                    <i class="iconfont icon-yuedu"></i> 点击阅读
+                  </router-link>
                 </div>
               </el-col>
             </el-row>
@@ -120,12 +138,16 @@
         </el-row>
       </div>
       <div class="transparent">
-        <el-row  type="flex" justify="space-around" >
+        <el-row type="flex" justify="space-around">
           <el-col :md="{span:4,offset:0}" :sm="{span:8,offset:0}" :xs="{span:10,offset:0}">
-           <router-link to="/"> <div class="btn">关于博主</div> </router-link>
+            <router-link to="/">
+              <div class="btn">关于博主</div>
+            </router-link>
           </el-col>
-          <el-col :md="{span:4,offset:0}" :sm="{span:8,offset:0}" :xs="{span:10,offset:0}" >
-            <router-link to="/"> <div class="btn">友情链接</div></router-link>
+          <el-col :md="{span:4,offset:0}" :sm="{span:8,offset:0}" :xs="{span:10,offset:0}">
+            <router-link to="/">
+              <div class="btn">友情链接</div>
+            </router-link>
           </el-col>
         </el-row>
       </div>
@@ -150,7 +172,6 @@ export default {
 </script>
 
 <style lang="less" scoped>
-
 .home {
   position: relative;
   z-index: 0;
@@ -174,10 +195,10 @@ export default {
         border-bottom: 3px solid #1cc4c4;
       }
     }
-    .easyMessage{
-      padding:0 5px;
+    .easyMessage {
+      padding: 0 5px;
       box-sizing: border-box;
-      color: #C1C1C1;
+      color: #c1c1c1;
       max-width: 500px;
       margin: 0 auto;
     }
@@ -265,7 +286,7 @@ export default {
   }
   .transparent {
     height: 250px;
-    .btn{
+    .btn {
       height: 35px;
       margin-top: 110px;
       text-align: center;
@@ -276,25 +297,25 @@ export default {
       letter-spacing: 2px;
       min-width: 100px;
       transition: 0.5s all;
-      &:hover{
+      &:hover {
         background-color: rgba(0, 0, 0, 0.5);
       }
     }
   }
-  .MineMessage{
+  .MineMessage {
     padding: 100px 10px;
     background-color: #fff;
     text-align: center;
-    border-bottom:dashed 1px #ccc ;
-    h3{
+    border-bottom: dashed 1px #ccc;
+    h3 {
       font-size: 30px;
       font-weight: bold;
       margin-bottom: 25px;
     }
-    span{
+    span {
       font-size: 16px;
     }
-    p{
+    p {
       margin-top: 45px;
       color: #888;
     }
@@ -402,23 +423,23 @@ export default {
   .user-link {
     outline: none;
   }
-  @media (max-width:767px){
+  @media (max-width: 767px) {
     // background-color: #bfa;
     padding-right: 5px;
-    i{
+    i {
       font-size: 14px;
     }
-    .el-icon-user-solid{
+    .el-icon-user-solid {
       color: orange;
       text-shadow: 0 0 0;
     }
 
-    .vip+.message {
-
+    .vip + .message {
       font-size: 10px;
       right: 70px;
     }
-    span,a{
+    span,
+    a {
       font-size: 0;
     }
   }

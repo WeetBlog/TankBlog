@@ -6,6 +6,62 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "587351",
+      "name": "展开",
+      "font_class": "zhankai",
+      "unicode": "e68a",
+      "unicode_decimal": 59018
+    },
+    {
+      "icon_id": "12316673",
+      "name": "展开菜单",
+      "font_class": "zhankaicaidan",
+      "unicode": "e623",
+      "unicode_decimal": 58915
+    },
+    {
+      "icon_id": "1067059",
+      "name": "N-all",
+      "font_class": "all",
+      "unicode": "e69c",
+      "unicode_decimal": 59036
+    },
+    {
+      "icon_id": "2198768",
+      "name": "技术",
+      "font_class": "jishu",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "4867113",
+      "name": "摘要",
+      "font_class": "zhaiyao",
+      "unicode": "e65f",
+      "unicode_decimal": 58975
+    },
+    {
+      "icon_id": "5122265",
+      "name": "生活",
+      "font_class": "shenghuo-",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "8430121",
+      "name": "其他",
+      "font_class": "qita",
+      "unicode": "e6d5",
+      "unicode_decimal": 59093
+    },
+    {
+      "icon_id": "14720954",
+      "name": "情感  感情",
+      "font_class": "qingganganqing",
+      "unicode": "e628",
+      "unicode_decimal": 58920
+    },
+    {
       "icon_id": "12753473",
       "name": "文章",
       "font_class": "wenzhang_huaban",

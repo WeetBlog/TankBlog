@@ -115,7 +115,7 @@ export default {
 .topBar {
   background-color: #777;
   height: 60px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   .h1 {
     width: 130px;
     height: 60px;

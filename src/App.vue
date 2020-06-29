@@ -1,5 +1,5 @@
 <template>
-  <div :class=" $route.meta.isHide ? 'app' : ''">
+  <div :class=" $route.meta.isHide ? 'appHome' : 'app'">
     <Header v-if="!$route.meta.isHide" />
     <div class="homePage" v-else>
       <div class="blogTitle">
@@ -28,6 +28,10 @@ export default {
 <style lang="less" scope>
 .app {
   height: 100%;
+  overflow: auto;
+}
+.appHome {
+  height: 100%;
   background-image: url("./image/backgroundDefout.webp");
   background-size: cover;
   background-attachment: fixed;
@@ -49,11 +53,11 @@ export default {
       content: "Tank";
       font-size: 45px;
       letter-spacing: 5px;
-      text-shadow: 0 0 10px rgba(0,0,0,0.3);
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     }
     p::after {
       content: "我愿将歌化作舟，聆听朗朗的微甜";
-      text-shadow: 0 0 10px rgba(0,0,0,0.3);
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     }
     p {
       margin: 15px auto 30px;
@@ -85,7 +89,6 @@ export default {
       }
     }
   }
-
 }
 #footer {
   background-color: #fff;
