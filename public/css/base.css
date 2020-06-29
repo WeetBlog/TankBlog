@@ -3,7 +3,7 @@
 	display: table;
 	clear: both;
 }
-
+::-webkit-scrollbar {display:none}
 html,body{
 	height: 100%;
 	font-family: tank;

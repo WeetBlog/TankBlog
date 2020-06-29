@@ -7,7 +7,7 @@
           <!-- <p class="user">
             <router-link class="user-link" to="/"><i class="iconfont icon-login01"></i> <span  class="login">登入</span></router-link>
             <router-link class="user-link" to="/"><i class="iconfont icon-zhucetianjiahaoyou"></i> <span  class="login">注册</span></router-link>
-          </p>-->
+          </p> -->
           <p class="user">
             <router-link class="user-link" to="/">
               <i class="el-icon-user-solid" style="padding-right:10px;"></i>
@@ -40,7 +40,7 @@
               <i class="iconfont icon-guanyuwo"></i>
               <span slot="title">关于我</span>
             </el-menu-item>
-            <el-menu-item index="1" class="drawer" disabled>
+            <el-menu-item index="3"  disabled>
               <i class="el-icon-setting"></i>
               <span slot="title">后台管理</span>
             </el-menu-item>
@@ -60,7 +60,7 @@
         </p>
         <el-row class="blogsWarp" type="flex" justify="center">
           <el-col :md="16" :sm="22" :xs="24">
-            <el-row :gutter="15">
+            <el-row :gutter="10">
               <el-col :md="{span:8,offset:0}" :sm="{span:7,offset:1}" :xs="{span:16,offset:4}">
                 <div class="blogsBox">
                   <div class="image">
@@ -120,8 +120,8 @@
         </el-row>
       </div>
       <div class="transparent">
-        <el-row :gutter="100">
-          <el-col :md="{span:4,offset:8}" :sm="{span:8,offset:4}" :xs="{span:10,offset:2}">
+        <el-row  type="flex" justify="space-around" >
+          <el-col :md="{span:4,offset:0}" :sm="{span:8,offset:0}" :xs="{span:10,offset:0}">
            <router-link to="/"> <div class="btn">关于博主</div> </router-link>
           </el-col>
           <el-col :md="{span:4,offset:0}" :sm="{span:8,offset:0}" :xs="{span:10,offset:0}" >
@@ -150,6 +150,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
+
 .home {
   position: relative;
   z-index: 0;
@@ -174,7 +175,7 @@ export default {
       }
     }
     .easyMessage{
-      padding:0 20px;
+      padding:0 5px;
       box-sizing: border-box;
       color: #C1C1C1;
       max-width: 500px;
@@ -284,6 +285,7 @@ export default {
     padding: 100px 10px;
     background-color: #fff;
     text-align: center;
+    border-bottom:dashed 1px #ccc ;
     h3{
       font-size: 30px;
       font-weight: bold;
@@ -399,6 +401,26 @@ export default {
   }
   .user-link {
     outline: none;
+  }
+  @media (max-width:767px){
+    // background-color: #bfa;
+    padding-right: 5px;
+    i{
+      font-size: 14px;
+    }
+    .el-icon-user-solid{
+      color: orange;
+      text-shadow: 0 0 0;
+    }
+
+    .vip+.message {
+
+      font-size: 10px;
+      right: 70px;
+    }
+    span,a{
+      font-size: 0;
+    }
   }
 }
 </style>
