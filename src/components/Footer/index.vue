@@ -2,8 +2,8 @@
   <div class="foot">
     <el-row class="footBar">
       <el-col :span="20" :offset="2">
-        <p class="footP"><i class="iconfont icon-youxiang"></i> 个人邮箱 : <a href="JavaScript:;">wanjunqing@aliyun.com</a></p>
-        <p class="footP"><i class="iconfont icon-github"></i> github : <a href="https://github.com/Tank-MrOne" target="_blank">https://github.com/Tank-MrOne</a></p>
+        <p class="footP"><i class="iconfont icon-youxiang email"></i> <a href="JavaScript:;"> wanjunqing@aliyun.com</a></p>
+        <p class="footP"><i class="iconfont icon-github github"></i> <a href="https://github.com/Tank-MrOne" target="_blank"> https://github.com/Tank-MrOne</a></p>
         <p class="footP">
           <span class="footText1"></span>
           <span class="footText2"></span>
@@ -51,6 +51,16 @@ export default {
     color: rgb(77, 181, 223);
 }
 
+.footP .email::after{
+  color: #888;
+  font-size: 14px;
+  content: " 个人邮箱 : ";
+}
+.footP .github::after{
+  color: #888;
+  font-size: 14px;
+  content: " github :";
+}
 
 .footText1::after {
   content: "Copyright";

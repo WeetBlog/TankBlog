@@ -21,7 +21,7 @@
           <el-menu-item index="6">关于我</el-menu-item>
           <el-menu-item index="7" disabled>后台管理</el-menu-item>
           <!-- <div class="topHide">
-            <a href="##" class="login el-icon-user-solid"><span class="tank"> 登入</span></a>
+            <a href="##" class="login iconfont icon-login01"><span class="tank"> 登入</span></a>
             <a href="##" class="register"><span class="tank"><i class="iconfont icon-zhucetianjiahaoyou"></i> 注册</span></a>
           </div> -->
           <div class="topHide">

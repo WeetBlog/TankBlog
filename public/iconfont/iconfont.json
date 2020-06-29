@@ -6,6 +6,62 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "623564",
+      "name": "阅读",
+      "font_class": "yuedu",
+      "unicode": "e639",
+      "unicode_decimal": 58937
+    },
+    {
+      "icon_id": "924719",
+      "name": "文章",
+      "font_class": "wenzhang",
+      "unicode": "e625",
+      "unicode_decimal": 58917
+    },
+    {
+      "icon_id": "93276",
+      "name": "关于我",
+      "font_class": "guanyuwo",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "841829",
+      "name": "编辑 笔 记事 手写",
+      "font_class": "bianjibijishishouxie",
+      "unicode": "e69b",
+      "unicode_decimal": 59035
+    },
+    {
+      "icon_id": "880162",
+      "name": "留言",
+      "font_class": "liuyan",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "1395853",
+      "name": "友情链接",
+      "font_class": "youqinglianjie",
+      "unicode": "e636",
+      "unicode_decimal": 58934
+    },
+    {
+      "icon_id": "6568050",
+      "name": "写博客",
+      "font_class": "xieboke",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    },
+    {
+      "icon_id": "10103929",
+      "name": "登入",
+      "font_class": "login01",
+      "unicode": "e741",
+      "unicode_decimal": 59201
+    },
+    {
       "icon_id": "1727462",
       "name": "227注册、添加好友",
       "font_class": "zhucetianjiahaoyou",

@@ -5,7 +5,7 @@
       <div class="blogTitle">
         <h1></h1>
         <p></p>
-        <button>Welcome To</button>
+        <router-link tag="button" to="/a">Welcome To</router-link>
       </div>
     </div>
     <router-view></router-view>
@@ -29,8 +29,9 @@ export default {
 .app {
   height: 100%;
   background-image: url("./image/backgroundDefout.webp");
-  background-size: 100%;
+  background-size: cover;
   background-attachment: fixed;
+  background-position: center;
   overflow: auto;
 }
 .homePage {
@@ -48,9 +49,11 @@ export default {
       content: "Tank";
       font-size: 45px;
       letter-spacing: 5px;
+      text-shadow: 0 0 10px rgba(0,0,0,0.3);
     }
     p::after {
       content: "我愿将歌化作舟，聆听朗朗的微甜";
+      text-shadow: 0 0 10px rgba(0,0,0,0.3);
     }
     p {
       margin: 15px auto 30px;
@@ -65,6 +68,7 @@ export default {
       border-radius: 4px;
       color: #fff;
       cursor: pointer;
+      outline: none;
     }
     button:hover {
       background-color: #777;
