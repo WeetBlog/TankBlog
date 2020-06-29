@@ -34,18 +34,30 @@
       </el-menu>
     </div>
     <div class="rightBlog">
-      <el-table :data="tableData" style="width: 100%;" height="100%">
-        <el-table-column prop="date" label="日期">
-          <template>
-            <el-button @click="drawer" type="text" size="small">查看</el-button>
-            <el-drawer :visible.sync="drawer" :with-header="false">
-              <span>我来啦!</span>
-            </el-drawer>
+      <el-table v-if="screenWidth > 767" :data="tableData" style="width: 100%;" height="100%" @row-click="clickRow">
+        <el-table-column prop="title" label="Title" width="300" class="titleTab">
+          <template slot-scope="scope">
+            <div class="titleTab">
+            <i class="iconfont icon-wenzhang"></i>
+            <span style="margin-left: 10px">{{ scope.row.title }}</span>
+            </div>
           </template>
         </el-table-column>
-        <el-table-column prop="name" label="姓名"></el-table-column>
-        <el-table-column prop="address" label="地址"></el-table-column>
+        <el-table-column prop="overview" label="Overview"></el-table-column>
+        <el-table-column prop="date" label="Date" width="150"></el-table-column>
       </el-table>
+      <el-table v-else :data="tableData" style="width: 100%;" height="100%" @row-click="clickRow">
+        <el-table-column prop="title" label="Title"  class="titleTab">
+          <template slot-scope="scope">
+            <div class="titleTab">
+            <i class="iconfont icon-wenzhang"></i>
+            <span style="margin-left: 10px">{{ scope.row.title }}</span>
+            </div>
+          </template>
+        </el-table-column>
+        <el-table-column prop="date" label="Date" width="100" ></el-table-column>
+      </el-table>
+      <div class="contentWarp" :class="contentWidth" ref="contentWarp"></div>
     </div>
   </div>
 </template>
@@ -57,28 +69,14 @@ export default {
   name: "Blog",
   data() {
     return {
+      screenWidth: document.body.clientWidth,
       isCollapse: true,
-      drawer: false,
+      contentWidth:'contentHide',
       tableData: [
         {
-          date: "2016-05-02",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1518 弄"
-        },
-        {
-          date: "2016-05-04",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1517 弄"
-        },
-        {
-          date: "2016-05-01",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1519 弄"
-        },
-        {
-          date: "2016-05-03",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1516 弄"
+          title: "王小虎王小虎王小虎王小虎王小虎王小虎王小虎王小虎王小虎",
+          overview: "上海市普陀区金沙江路 1518 弄",
+          date: "2016-05-02"
         }
       ]
     };
@@ -86,6 +84,12 @@ export default {
   methods: {
     changeIsCollapse() {
       this.isCollapse = !this.isCollapse;
+    },
+    clickRow(row) {
+      console.log(row);
+      this.contentWidth = 'contentShow'
+      // console.log(column)
+      // console.log(event)
     }
   }
 };
@@ -153,6 +157,7 @@ export default {
     }
   }
   .rightBlog {
+    position: relative;
     width: 100%;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.8);
@@ -162,12 +167,42 @@ export default {
       background-color: transparent;
     }
     /deep/.el-table th {
-      color: #333;
+      color: #fff;
+      font-size: 17px;
+      background-color: rgba(0, 0, 0, 0.5);
     }
-    /deep/.el-table th,
+
     /deep/.el-table tr {
       font-size: 16px;
       background-color: transparent;
+      cursor: pointer;
+    }
+    .titleTab{
+      i{
+        font-size: 14px;
+        color: #fff;
+        background: #777;
+        border-radius: 50%;
+        padding: 5px;
+      }
+      
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .contentWarp{
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      background-color: #bfa;
+      transition: 0.3s all;
+    }
+    .contentShow{
+        width: 60%;
+    }
+    .contentHide{
+       width: 0;
     }
   }
 }
