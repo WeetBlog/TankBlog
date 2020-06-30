@@ -13,8 +13,8 @@
           <el-menu-item disabled style="opacity:1;cursor:default;">
             <h1 class="h1"></h1>
           </el-menu-item>
-          <el-menu-item class="topList" index="1">首页</el-menu-item>
-          <el-menu-item class="topList" index="2">博客</el-menu-item>
+          <el-menu-item class="topList" index="1" route="{path:'/'}">首页</el-menu-item>
+          <el-menu-item class="topList" index="2" route="{path:'/blog'}">博客</el-menu-item>
           <el-menu-item class="topList" index="3">留言</el-menu-item>
           <el-menu-item class="topList" index="4">简言</el-menu-item>
           <el-menu-item class="topList" index="5">友链</el-menu-item>
@@ -105,6 +105,11 @@ export default {
       activeIndex: "1",
       drawer: false
     };
+  },
+  mounted() {
+    this.$bus.$on('changeIndex',(index)=>{
+      this.activeIndex = index
+    })
   }
 };
 </script>

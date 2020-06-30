@@ -68,7 +68,7 @@ import {
   // Timeline,
   // TimelineItem,
   // Link,
-  // Divider,
+  Divider,
   // Image,
   // Calendar,
   // Backtop,
@@ -148,7 +148,7 @@ Vue.use(Col);
 // Vue.use(Timeline);
 // Vue.use(TimelineItem);
 // Vue.use(Link);
-// Vue.use(Divider);
+Vue.use(Divider);
 // Vue.use(Image);
 // Vue.use(Calendar);
 // Vue.use(Backtop);

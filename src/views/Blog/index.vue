@@ -34,30 +34,62 @@
       </el-menu>
     </div>
     <div class="rightBlog">
-      <el-table v-if="screenWidth > 767" :data="tableData" style="width: 100%;" height="100%" @row-click="clickRow">
+      <el-table
+        v-if="screenWidth > 767"
+        :data="tableData"
+        style="width: 100%;"
+        height="100%"
+        @row-click="clickRow"
+      >
         <el-table-column prop="title" label="Title" width="300" class="titleTab">
           <template slot-scope="scope">
             <div class="titleTab">
-            <i class="iconfont icon-wenzhang"></i>
-            <span style="margin-left: 10px">{{ scope.row.title }}</span>
+              <i class="iconfont icon-wenzhang"></i>
+              <span style="margin-left: 10px">{{ scope.row.title }}</span>
             </div>
           </template>
         </el-table-column>
         <el-table-column prop="overview" label="Overview"></el-table-column>
-        <el-table-column prop="date" label="Date" width="150"></el-table-column>
+        <el-table-column prop="date" label="Date" width="300"></el-table-column>
       </el-table>
       <el-table v-else :data="tableData" style="width: 100%;" height="100%" @row-click="clickRow">
-        <el-table-column prop="title" label="Title"  class="titleTab">
+        <el-table-column prop="title" label="Title" class="titleTab">
           <template slot-scope="scope">
             <div class="titleTab">
-            <i class="iconfont icon-wenzhang"></i>
-            <span style="margin-left: 10px">{{ scope.row.title }}</span>
+              <i class="iconfont icon-wenzhang"></i>
+              <span style="margin-left: 10px">{{ scope.row.title }}</span>
             </div>
           </template>
         </el-table-column>
-        <el-table-column prop="date" label="Date" width="100" ></el-table-column>
+        <el-table-column prop="date" label="Date" width="100"></el-table-column>
       </el-table>
-      <div class="contentWarp" :class="contentWidth" ref="contentWarp"></div>
+      <div class="contentWarp" :class="contentWidth" ref="contentWarp">
+        <div class="title">
+          博客的标题
+          博客的标题博客的标题博客的标题博客的标题博客的标题博客的标题博客的标题博客的标题博客的标题博客的标题博客的标题博客的标题博客的标题
+          <div class="close el-icon-close" @click="clickClose">
+            <div class="closeText">关闭</div>
+          </div>
+        </div>
+        <div class="content">
+          <div class="userMessage">
+            <div class="image">
+              <img src="./image/blog.webp" alt />
+              <span>博主：</span>
+              <span class="blogName">Tank</span>
+            </div>
+
+            <div class="tag">
+              <el-tag type="success" size="mini">个人</el-tag>
+              <el-tag size="mini">生后记录</el-tag>
+            </div>
+            <p class="message"></p>
+          </div>
+          <el-divider>
+            <i class="el-icon-time"></i> 2020-06-30
+          </el-divider>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -71,8 +103,19 @@ export default {
     return {
       screenWidth: document.body.clientWidth,
       isCollapse: true,
-      contentWidth:'contentHide',
+      contentWidth: "contentHide",
       tableData: [
+        {
+          title: "王小虎王小虎王小虎王小虎王小虎王小虎王小虎王小虎王小虎",
+          overview:
+            "上海市普陀区金沙江路 1518 弄上海市普陀区金沙江路 1518 弄上海市普陀区金沙江路 1518 弄上海市普陀区金沙江路 1518 弄上海市普陀区金沙江路 1518 弄上海市普陀区金沙江路 1518 弄上海市普陀区金沙江路 1518 弄上海市普陀区金沙江路 1518 弄上海市普陀区金沙江路 1518 弄上海市普陀区金沙江路 1518 弄上海市普陀区金沙江路 1518 弄上海市普陀区金沙江路 1518 弄上海市普陀区金沙江路 1518 弄上海市普陀区金沙江路 1518 弄上海市普陀区金沙江路 1518 弄上海市普陀区金沙江路 1518 弄上海市普陀区金沙江路 1518 弄上海市普陀区金沙江路 1518 弄上海市普陀区金沙江路 1518 弄上海市普陀区金沙江路 1518 弄上海市普陀区金沙江路 1518 弄上海市普陀区金沙江路 1518 弄上海市普陀区金沙江路 1518 弄",
+          date: "2016-05-02"
+        },
+        {
+          title: "王小虎王小虎王小虎王小虎王小虎王小虎王小虎王小虎王小虎",
+          overview: "上海市普陀区金沙江路 1518 弄",
+          date: "2016-05-02"
+        },
         {
           title: "王小虎王小虎王小虎王小虎王小虎王小虎王小虎王小虎王小虎",
           overview: "上海市普陀区金沙江路 1518 弄",
@@ -81,15 +124,19 @@ export default {
       ]
     };
   },
+  mounted() {
+    this.$bus.$emit('changeIndex','2')
+  },
   methods: {
     changeIsCollapse() {
       this.isCollapse = !this.isCollapse;
     },
     clickRow(row) {
       console.log(row);
-      this.contentWidth = 'contentShow'
-      // console.log(column)
-      // console.log(event)
+      this.contentWidth = "contentShow";
+    },
+    clickClose() {
+      this.contentWidth = "contentHide";
     }
   }
 };
@@ -125,10 +172,14 @@ export default {
         color: #fff;
         border-radius: 0;
         font-size: 16px;
+        @media (max-width:767px) {
+          display: none;
+        }
       }
       .shouBtn {
-        width: 201px;
+        width: 200px;
         transition: 0.3s all ease-in;
+        box-sizing: border-box;
       }
     }
     .leftBar {
@@ -177,32 +228,112 @@ export default {
       background-color: transparent;
       cursor: pointer;
     }
-    .titleTab{
-      i{
+    /deep/.el-table .cell {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .titleTab {
+      i {
         font-size: 14px;
         color: #fff;
         background: #777;
         border-radius: 50%;
         padding: 5px;
       }
-      
+
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
     }
-    .contentWarp{
-      position: absolute;
-      top: 0;
+    .contentWarp {
+      position: fixed;
+      @media (max-width: 767px) {
+        top: 0px;
+        position : absolute;
+      }
+      top: 60px;
       right: 0;
       height: 100%;
-      background-color: #bfa;
+      background-color: #eeeeee;
       transition: 0.3s all;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      .title {
+        position: relative;
+        background-color: #fff;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        font-weight: bold;
+        letter-spacing: 2px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        font-size: 22px;
+        box-sizing: border-box;
+        padding: 15px 100px 15px 10px;
+        border-top: 1px solid rgba(0, 0, 0, 0.5);
+        .close {
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+          border-radius: 2px;
+          transform: translateY(-50%);
+          text-align: center;
+          line-height: 30px;
+          right: 10px;
+          width: 30px;
+          height: 30px;
+          color: #999;
+          &:hover {
+            background-color: #ccc;
+            color: #fff;
+          }
+          &:hover .closeText {
+            display: block;
+          }
+          .closeText {
+            position: absolute;
+            display: none;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 12px;
+            right: 35px;
+            color: #999;
+          }
+        }
+      }
+      .content {
+        margin: 10px;
+        padding: 10px;
+        background-color: #fff;
+        border-radius: 3px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        .image {
+          color: #888;
+          padding-right: 100px;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            margin-right: 20px;
+          }
+          .blogName{
+            color: skyblue;
+            font-size: 16px;
+          }
+        }
+      }
     }
-    .contentShow{
-        width: 60%;
+    .contentShow {
+      width: 60%;
+      @media (max-width: 767px) {
+        width: 100%;
+      }
     }
-    .contentHide{
-       width: 0;
+    .contentHide {
+      width: 0;
     }
   }
 }
