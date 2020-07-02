@@ -24,7 +24,9 @@
           <el-menu-item class="topList" index="3">
             <router-link class="aaa" to="/message">留言</router-link>
           </el-menu-item>
-          <el-menu-item class="topList" index="4">简言</el-menu-item>
+          <el-menu-item class="topList" index="4">
+            <router-link class="aaa" to="/record">简言</router-link>
+          </el-menu-item>
           <el-menu-item class="topList" index="5">友链</el-menu-item>
           <el-menu-item class="topList" index="6">关于我</el-menu-item>
           <el-menu-item class="topList" index="7" disabled>后台管理</el-menu-item>
@@ -71,7 +73,7 @@
                   </router-link>
                 </el-col>
                 <el-col :span="3">
-                  <router-link to="/">
+                  <router-link to="/record">
                     <i class="iconfont icon-bianjibijishishouxie"></i>
                     <p>Record</p>
                   </router-link>
@@ -126,7 +128,6 @@ export default {
 
 <style lang="less" scoped>
 .max {
-
   .topBar {
     background-color: #777;
     height: 60px;

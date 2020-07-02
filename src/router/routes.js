@@ -1,6 +1,7 @@
 import Home from '../views/Home'
 import Blog from '../views/Blog'
 import Message from '../views/Message'
+import DateRecording from '../views/DateRecording'
 
 export default [
     {
@@ -17,6 +18,10 @@ export default [
     {
         path:'/message',
         component : Message,
+    },
+    {
+        path:'/record',
+        component : DateRecording,
     },
     {
         path:'/',

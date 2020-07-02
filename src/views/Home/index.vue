@@ -32,7 +32,7 @@
                 <span slot="title">留言</span>
               </el-menu-item>
             </router-link>
-            <router-link class="user-link" to="/blog">
+            <router-link class="user-link" to="/record">
               <el-menu-item index="1" class="drawer">
                 <i class="iconfont icon-bianjibijishishouxie"></i>
                 <span slot="title">简言</span>

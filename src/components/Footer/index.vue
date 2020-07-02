@@ -29,7 +29,7 @@
 
 <script type="text/ecmascript-6">
 export default {
-  name: "Footer"
+  name: "Footer",
 };
 </script>
 
@@ -86,12 +86,12 @@ export default {
     .footText8::after {
       content: "备案号 : 京ICP备20010489号-1";
     }
-    @media (max-width: 767px){
-      &:nth-child(3){
+    @media (max-width: 767px) {
+      &:nth-child(3) {
         margin-top: 20px;
         line-height: 150%;
       }
-      span{
+      span {
         padding: 2px;
         font-size: 12px;
         color: #ccc;
