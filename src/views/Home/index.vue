@@ -38,13 +38,13 @@
                 <span slot="title">简言</span>
               </el-menu-item>
             </router-link>
-            <router-link class="user-link" to="/blog">
+            <router-link class="user-link" to="/friends">
               <el-menu-item index="1" class="drawer">
                 <i class="iconfont icon-youqinglianjie"></i>
                 <span slot="title">友链</span>
               </el-menu-item>
             </router-link>
-            <router-link class="user-link" to="/blog">
+            <router-link class="user-link" to="/aboutme">
               <el-menu-item index="1" class="drawer">
                 <i class="iconfont icon-guanyuwo"></i>
                 <span slot="title">关于我</span>

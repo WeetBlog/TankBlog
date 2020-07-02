@@ -27,8 +27,12 @@
           <el-menu-item class="topList" index="4">
             <router-link class="aaa" to="/record">简言</router-link>
           </el-menu-item>
-          <el-menu-item class="topList" index="5">友链</el-menu-item>
-          <el-menu-item class="topList" index="6">关于我</el-menu-item>
+          <el-menu-item class="topList" index="5">
+            <router-link class="aaa" to="/friends">友链</router-link>
+          </el-menu-item>
+          <el-menu-item class="topList" index="6">
+            <router-link class="aaa" to="/aboutme">关于我</router-link>
+          </el-menu-item>
           <el-menu-item class="topList" index="7" disabled>后台管理</el-menu-item>
           <!-- <div class="topHide">
             <a href="##" class="login iconfont icon-login01"><span class="tank"> 登入</span></a>
@@ -79,13 +83,13 @@
                   </router-link>
                 </el-col>
                 <el-col :span="3">
-                  <router-link to="/">
+                  <router-link to="/friends">
                     <i class="iconfont icon-youqinglianjie"></i>
                     <p>Friends</p>
                   </router-link>
                 </el-col>
                 <el-col :span="3">
-                  <router-link to="/">
+                  <router-link to="/aboutme">
                     <i class="el-icon-user"></i>
                     <p>Mine</p>
                   </router-link>
