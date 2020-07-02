@@ -3,6 +3,7 @@ import Blog from '../views/Blog'
 import Message from '../views/Message'
 import DateRecording from '../views/DateRecording'
 import Friends from '../views/Friends'
+import Aboutme from '../views/Aboutme'
 
 export default [
     {
@@ -27,6 +28,10 @@ export default [
     {
         path:'/friends',
         component : Friends,
+    },
+    {
+        path:'/aboutme',
+        component : Aboutme,
     },
     {
         path:'/',
