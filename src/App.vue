@@ -5,7 +5,7 @@
       <div class="blogTitle">
         <h1></h1>
         <p></p>
-        <router-link tag="button" to="/a">Welcome To</router-link>
+        <router-link tag="button" to="/blog">Welcome To</router-link>
       </div>
     </div>
     <router-view></router-view>

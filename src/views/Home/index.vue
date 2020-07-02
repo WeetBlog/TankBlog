@@ -26,7 +26,7 @@
                 <span slot="title">博客</span>
               </el-menu-item>
             </router-link>
-            <router-link class="user-link" to="/blog">
+            <router-link class="user-link" to="/message">
               <el-menu-item index="1" class="drawer">
                 <i class="iconfont icon-liuyan"></i>
                 <span slot="title">留言</span>

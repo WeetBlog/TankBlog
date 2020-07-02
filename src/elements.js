@@ -49,7 +49,7 @@ import {
   // Progress,
   // Spinner,
   // Badge,
-  // Card,
+  Card,
   // Rate,
   // Steps,
   // Step,
@@ -71,11 +71,11 @@ import {
   Divider,
   // Image,
   // Calendar,
-  // Backtop,
+  Backtop,
   // PageHeader,
   // CascaderPanel,
   // Loading,
-  // MessageBox,
+  MessageBox,
   Message,
   // Notification
 } from 'element-ui';
@@ -129,7 +129,7 @@ Vue.use(Col);
 // Vue.use(Progress);
 // Vue.use(Spinner);
 // Vue.use(Badge);
-// Vue.use(Card);
+Vue.use(Card);
 // Vue.use(Rate);
 // Vue.use(Steps);
 // Vue.use(Step);
@@ -151,16 +151,16 @@ Vue.use(Col);
 Vue.use(Divider);
 // Vue.use(Image);
 // Vue.use(Calendar);
-// Vue.use(Backtop);
+Vue.use(Backtop);
 // Vue.use(PageHeader);
 // Vue.use(CascaderPanel);
 
 // Vue.use(Loading.directive);
 
 // Vue.prototype.$loading = Loading.service;
-// Vue.prototype.$msgbox = MessageBox;
+Vue.prototype.$msgbox = MessageBox;
 // Vue.prototype.$alert = MessageBox.alert;
-// Vue.prototype.$confirm = MessageBox.confirm;
+Vue.prototype.$confirm = MessageBox.confirm;
 // Vue.prototype.$prompt = MessageBox.prompt;
 // Vue.prototype.$notify = Notification;
 Vue.prototype.$message = Message;
