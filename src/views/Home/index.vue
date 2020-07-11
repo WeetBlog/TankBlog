@@ -4,11 +4,11 @@
     <el-drawer class="elDrawer" title="我是标题" :visible.sync="drawer" :with-header="false">
       <el-row>
         <el-col :span="24">
-          <!-- <p class="user">
+          <p class="user">
             <router-link class="user-link" to="/"><i class="iconfont icon-login01"></i> <span  class="login">登入</span></router-link>
             <router-link class="user-link" to="/"><i class="iconfont icon-zhucetianjiahaoyou"></i> <span  class="login">注册</span></router-link>
-          </p>-->
-          <p class="user">
+          </p>
+          <!-- <p class="user">
             <router-link class="user-link" to="/">
               <i class="el-icon-user-solid" style="padding-right:10px;"></i>
               <span class="vip" title="个人主页">用户名用户名用</span>
@@ -18,7 +18,7 @@
               <i class="el-icon-switch-button" style="padding-right:10px;"></i>
               <span class="login">注销</span>
             </router-link>
-          </p>
+          </p> -->
           <el-menu default-active="2" class="el-menu-vertical-demo" text-color="#000">
             <router-link class="user-link" to="/blog">
               <el-menu-item index="1" class="drawer">
@@ -402,8 +402,8 @@ export default {
     white-space: nowrap;
     max-width: 60%;
     margin-right: 20px;
-    color: skyblue;
-    text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    color: #555;
+    // text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
     &:hover {
       text-decoration: underline;
     }

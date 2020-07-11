@@ -45,7 +45,7 @@ export default {
   name: "",
   data() {
       return {
-          textColor:"green"
+          textColor:"red"
       }
   },
 };

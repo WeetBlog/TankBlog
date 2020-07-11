@@ -21,18 +21,19 @@
           <h3>关于本站</h3>
           <p>本站最早版本制作时间为2018年</p>
           <p>本站最新版本最后制作时间为2020年6月25日至今，（因疫情在家编写）</p>
+          <p>相比之前版本删除了许多杂乱动画效果，往后也打算继续简洁化</p>
           <p>【本站结构】</p>
           <p>
-            浏览界面:
-            <span> 采用的是 Vue 框架 + ElementUI + Vuex数据管理 + Vue-Router跳转</span> , 
+            前端博客:
+            <span>采用的是 Vue 框架 + ElementUI + Vuex数据管理 + Vue-Router跳转</span> ,
           </p>
           <p>
-            后台管理组件 ：
-            <span>采用的是 React 框架</span> 
+            前端管理 ：
+            <span>采用的是 React + Antd + Axios + ES6 + Webpack + Echarts</span>
           </p>
           <p>
-            后台 ：
-            <span>采用的是 NodeJs 数据处理 + Tomcat 服务</span> 
+            后端 ：
+            <span>采用的是 Node + Express + mongoose + Tomcat</span>
           </p>
           <p>本站采用百度云的服务器BCC和存储对象OSS</p>
         </div>
@@ -57,16 +58,28 @@
 export default {
   name: ""
 };
+
+// 传入一个参数 n
+function getFactorial(n) {
+  // 判断n 是否小于 1
+  if (n <= 1) {
+    return 1;
+  }
+  //返回 n * 继续调用这个函数的返回值
+  return n * getFactorial(n - 1);
+}
+console.log(getFactorial(5)); // 5! = 4! * 
+
 </script>
 
 
 
 <style lang="less" scoped>
-.el-row{
-    background-image: url('./image/aboutme.webp');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.el-row {
+  background-image: url("./image/aboutme.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 main {
   width: 100%;
@@ -75,7 +88,8 @@ main {
   padding: 30px;
   background-color: rgba(255, 255, 255, 0.6);
   transition: all 0.4s;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 main:hover {
   background-color: #ffffff;
